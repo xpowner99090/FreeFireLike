@@ -64,7 +64,7 @@ async def send_request(encrypted_uid, token, url):
             'Expect': "100-continue",
             'X-Unity-Version': "2018.4.11f1",  # Update if Unity version changed
             'X-GA': "v1 1",
-            'ReleaseVersion': "OB53"  # Updated for OB50
+            'ReleaseVersion': "OB54"  # Updated for OB50
         }
         async with aiohttp.ClientSession() as session:
             async with session.post(url, data=edata, headers=headers) as response:
@@ -136,7 +136,7 @@ def make_request(encrypt, server_name, token):
             'Expect': "100-continue",
             'X-Unity-Version': "2018.4.11f1",
             'X-GA': "v1 1",
-            'ReleaseVersion': "OB53"  # Updated for OB50
+            'ReleaseVersion': "OB54"  # Updated for OB50
         }
         response = requests.post(url, data=edata, headers=headers, verify=False)
         hex_data = response.content.hex()
